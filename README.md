@@ -16,7 +16,7 @@ Available variables are listed below, along with default values (see `defaults/m
 
 Controls the major version of Filebeat which is installed.
 
-    filebeat_package: filebeat
+    filebeat_package: filebeat-7.12.1 # 7.12.1 is the lasted version filebeat support elasticsearch open distro version. (you can use 'filebeat' install lasted version of filebeat)
     filebeat_package_state: present
 
 The specific package to be installed. You can specify a version of the package using the correct syntax for your platform and package manager by changing the package name. You can also control the package state (e.g. present, absent, or latest).
