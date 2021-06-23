@@ -2,10 +2,9 @@
 dependencies: []
 
 galaxy_info:
-  role_name: filebeat
-  author: geerlingguy
-  description: Filebeat for Linux.
-  company: "Midwestern Mac, LLC"
+  role_name: filebeat-oss
+  author: soloradish
+  description: Filebeat OSS distro for Linux.
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   platforms:
