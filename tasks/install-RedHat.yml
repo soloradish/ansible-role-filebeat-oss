@@ -1,3 +1,4 @@
+---
 - name: set filebeat_arch (arm64)
   set_fact:
     filebeat_arch: "aarch64"
