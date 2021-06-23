@@ -1,0 +1,22 @@
+- name: set filebeat_arch (arm64)
+  set_fact:
+    filebeat_arch: "aarch64"
+  when:
+    ansible_facts['architecture'] == "aarch64" or
+    ansible_facts['architecture'] == "arm64"
+- name: set filebeat_arch (x86)
+  set_fact:
+    filebeat_arch: "x86_64"
+  when:
+    ansible_facts['architecture'] == "x86_64"
+- name: set filebeat_arch (i686)
+  set_fact:
+    filebeat_arch: "i686"
+  when:
+    ansible_facts['architecture'] == "i386" or
+    ansible_facts['architecture'] == "i686"
+
+- name: install filebeat
+  yum:
+    name: "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-{{ filebeat_version }}-{{ filebeat_arch }}.rpm"
+    state: present
